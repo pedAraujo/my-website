@@ -1,5 +1,4 @@
 import React from "react";
-import { Text } from React;
 import { Link } from "react-router-dom";
 import { MdFingerprint } from "react-icons/md";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -11,12 +10,11 @@ function Navbar() {
         <div className="navbar-container container">
           <Link to="/" className="navbar-logo">
             <MdFingerprint className="navbar-icon" />
-            PEDRO
+            Hello Internet :)
           </Link>
           <div className="menu-icon">{}</div>
         </div>
       </div>
-      <Text>Hello Internet  :)</Text>
     </>
   );
 }
