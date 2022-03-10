@@ -8,6 +8,7 @@ function Navbar() {
     <>
       <div className="navbar">
         <div className="navbar-container container">
+          <Text>Hello Internet :)</Text>
           <Link to="/" className="navbar-logo">
             <MdFingerprint className="navbar-icon" />
             PEDRO
