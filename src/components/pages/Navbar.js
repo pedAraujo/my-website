@@ -10,7 +10,7 @@ function Navbar() {
         <div className="navbar-container container">
           <Link to="/" className="navbar-logo">
             <MdFingerprint className="navbar-icon" />
-            HELLO INTERNET :)
+            PEDRO
           </Link>
           <div className="menu-icon">{}</div>
         </div>
