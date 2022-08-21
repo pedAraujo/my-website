@@ -114,8 +114,8 @@ function Home() {
 			{" "}
 			<WelcomeSection>
 				<MyPhotoSection>
-					<PhotoSquares src={Squares} />
-					<MyPhoto src={Picture} />
+					<PhotoSquares src={Squares} alt="" />
+					<MyPhoto src={Picture} alt="" />
 				</MyPhotoSection>
 				<WelcomeTextSection>
 					<WelcomeTextTitle>HI, I'M PEDRO ARAUJO</WelcomeTextTitle>

@@ -1,3 +1,4 @@
+import React from "react"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import GlobalStyle from "./globalStyles"
 import Header from "./components/header/Header"
@@ -9,7 +10,6 @@ function App() {
 		<div>
 			<Router>
 				<Header />
-
 				<GlobalStyle />
 				<Routes>
 					<Route exact path="/" element={<Home />} />
