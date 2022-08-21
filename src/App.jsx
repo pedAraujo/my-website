@@ -1,31 +1,23 @@
-import "./App.css"
-import Navbar from "./components/navbar/Navbar"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import GlobalStyle from "./globalStyles"
+import Header from "./components/header/Header"
 import Home from "./pages/home/Home"
+import Footer from "./components/footer/Footer"
 
 function App() {
 	return (
 		<div>
 			<Router>
-				<Navbar />
+				<Header />
+
+				<GlobalStyle />
 				<Routes>
 					<Route exact path="/" element={<Home />} />
 				</Routes>
+				<Footer />
 			</Router>
 		</div>
 	)
 }
 
 export default App
-
-/*
-notas
-
-Router-Dom serve pra gerenciar multiplas paginas no site
-
-Tudo tem de estar dentro de <Router> para dizer ao Router-Dom que sao paginas
-
-<Routes> possibilita ao React mudar de pagina. Fora do <Routes> vao componentes globais (aparecem em todas as pag), dentro do <Routes> vao as paginas
-
-Route sao as rotas das pag, que recebe a prop path que eh o endereco url
-*/
