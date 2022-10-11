@@ -1,150 +1,135 @@
 import React from "react"
-import styled from "styled-components"
-import Instagram from "@material-ui/icons/Instagram"
-import Facebook from "@material-ui/icons/Facebook"
-import Twitter from "@material-ui/icons/Twitter"
-import LinkedIn from "@material-ui/icons/LinkedIn"
-import Picture from "../../assets/me.png"
-import Squares from "../../assets/squares.svg"
-
-const WelcomeSection = styled.section`
-	width: 100%;
-	height: 500px;
-	background-color: transparent;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	margin-top: 150px;
-	position: relative;
-`
-
-const MyPhotoSection = styled.div`
-	position: relative;
-	width: 100%;
-	height: 500px;
-	background-color: transparent;
-	display: flex;
-	align-items: flex-end;
-	justify-content: center;
-`
-const MyPhoto = styled.img`
-	height: 525px;
-	background-color: transparent;
-	z-index: 2;
-	position: absolute;
-`
-
-const PhotoSquares = styled.img`
-	background-color: transparent;
-	position: absolute;
-	height: 590px;
-	margin-left: 80px;
-	margin-bottom: -55px;
-	z-index: 1;
-`
-
-const WelcomeTextSection = styled.div`
-	width: 100%;
-	height: 500px;
-	background-color: transparent;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 32px;
-	padding-right: 60px;
-`
-
-const WelcomeTextTitle = styled.h1`
-	margin-top: 50px;
-	background-color: transparent;
-	font-family: Verdana, Sans-serif;
-	font-size: 36px;
-	font-weight: normal;
-`
-const WelcomeTextContent = styled.h2`
-	background-color: transparent;
-	font-family: Verdana, Sans-serif;
-	font-size: 28px;
-	font-weight: normal;
-`
-const ButtonsSection = styled.div`
-	width: 100%;
-	height: 150px;
-	background-color: transparent;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-`
-
-const IconButton = styled.a`
-	width: 50px;
-	height: 50px;
-	border: none;
-	border-radius: 15px;
-	box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
-	margin: 30px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: #1e3461;
-	z-index: 1;
-
-	&:hover {
-		background-color: black;
-		opacity: 0.7;
-	}
-`
-
-const iconStyle = (icon) => {
-	return styled(icon)`
-		color: white;
-		font-size: 20px;
-		transform: scale(1.2);
-	`
-}
-
-const InstagramIcon = iconStyle(Instagram)
-const FacebookIcon = iconStyle(Facebook)
-const TwitterIcon = iconStyle(Twitter)
-const LinkedInIcon = iconStyle(LinkedIn)
+import "./home.css"
+import profilePic from "../../assets/profilePic.svg"
+import hexThree from "../../assets/hex3.svg"
+import hex from "../../assets/hex.svg"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+	faFacebook,
+	faLinkedin,
+	faInstagram,
+	faGithub,
+} from "@fortawesome/free-brands-svg-icons"
 
 function Home() {
 	return (
 		<>
-			{" "}
-			<WelcomeSection>
-				<MyPhotoSection>
-					<PhotoSquares src={Squares} alt="" />
-					<MyPhoto src={Picture} alt="" />
-				</MyPhotoSection>
-				<WelcomeTextSection>
-					<WelcomeTextTitle>HI, I'M PEDRO ARAUJO</WelcomeTextTitle>
-					<WelcomeTextContent>
-						Welcome to my space on the internet.
-					</WelcomeTextContent>
-					<h2 style={{ color: "red" }}>Under construction</h2>
-					<ButtonsSection>
-						<IconButton
-							href="https://www.instagram.com/ped_araujo/"
-							target="_blank"
-						>
-							<InstagramIcon />
-						</IconButton>
-						<IconButton href="https://www.facebook.com/p3d90/" target="_blank">
-							<FacebookIcon />
-						</IconButton>
-						<IconButton href="https://twitter.com/ped_araujo" target="_blank">
-							<TwitterIcon />
-						</IconButton>
-						<IconButton
-							href="https://www.linkedin.com/in/pedaraujo/"
-							target="_blank"
-						>
-							<LinkedInIcon />
-						</IconButton>
-					</ButtonsSection>
-				</WelcomeTextSection>
-			</WelcomeSection>
+			<div className="header-container">
+				<img className="hex3" alt="Not found" src={hexThree} />
+				<div className="header-text">
+					<p>I create, fix and tinker</p>
+					<p>with technology to find</p>
+					<p>solutions and help others.</p>
+				</div>
+				<img className="hex" alt="Not found" src={hex} />
+			</div>
+			<div className="presentation-container">
+				<div className="profile-grid">
+					<img className="profile-picture" alt="Not found" src={profilePic} />
+
+					<div className="profile-text">
+						<h3>From atoms to rockets</h3>
+						<div className="profile-text-body">
+							<p>I'm Pedro Araujo, programmer,</p>
+							<p>aerospace engineer, physicist,</p>
+							<p>scientist and artist located in São Paulo.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div className="welcome-container">
+				<h2 className="welcome-text">Welcome to my space on the internet</h2>
+				<div className="welcome-grid">
+					<div className="box-one">
+						<h3>Frontend development</h3>
+						<p>
+							I write HTML, CSS and JS using Node, React and React Native to
+							develop solutions for the web and mobile. I am aiming to become a
+							fully fledged software enginee. If you have a project that could
+							use my help, please reach out.
+						</p>
+					</div>
+					<div className="box-two">
+						<h3>Teams & Collaborations</h3>
+						<p>
+							I've had the opportunity to meet and collaborate with some amazing
+							people to think, plan and execute awesome projects. I helped
+							building a cubesat satellite, a sounding rocket, an AI chatbot, a
+							hydrogen electric racing car, mobile games and apps, & more
+						</p>
+					</div>
+					<div className="box-three">
+						<h3>Side Projects</h3>
+						<p>
+							I aim to make cool stuff my next business. Websites, apps, robots,
+							automation, physics modeling, CAD design, graphic and video
+							editing, drawing, project management and much more. Stick around
+							to find out what I'm currently working on.
+						</p>
+					</div>
+					<div className="box-four">
+						<h3>Writing</h3>
+						<p>
+							I am known for drawing on complex bodies of knowledge to tackle
+							mind puzzles and weird questions. I enjoy sharing and commenting
+							on anything using straightforward logic and the scientific mental
+							framework on my blog.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div className="social-media-container">
+				<h2 className="around-the-web">Around the web</h2>
+				<div className="honeycomb">
+					<div className="ibws-fix">
+						<a className="hexagon" href="https://github.com/pedAraujo">
+							<div className="hexagontent">
+								<FontAwesomeIcon
+									icon={faGithub}
+									size="5x"
+									style={{ color: (0, 0, 0) }}
+								/>
+							</div>
+						</a>
+						<div className="hexagon">
+							<div
+								className="hexagontent"
+								href="https://www.linkedin.com/in/pedaraujo/"
+							>
+								<FontAwesomeIcon
+									icon={faLinkedin}
+									size="5x"
+									style={{ color: (0, 0, 0) }}
+								/>
+							</div>
+						</div>
+						<div className="hexagon">
+							<div
+								className="hexagontent"
+								href="https://www.facebook.com/p3d90"
+							>
+								<FontAwesomeIcon
+									icon={faFacebook}
+									size="5x"
+									style={{ color: (0, 0, 0) }}
+								/>
+							</div>
+						</div>
+						<div className="hexagon">
+							<div className="hexagontent">
+								<FontAwesomeIcon
+									icon={faInstagram}
+									size="5x"
+									style={{ color: (0, 0, 0) }}
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div className="footer">
+				<h4>2022 &copy; Pedro Araujo</h4>
+			</div>
 		</>
 	)
 }
