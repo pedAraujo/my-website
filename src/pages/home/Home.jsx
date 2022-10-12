@@ -1,5 +1,5 @@
 import React from "react"
-import "./Home.css"
+import "./home.css"
 import profilePic from "../../assets/profilePic.svg"
 import hexThree from "../../assets/hex3.svg"
 import hex from "../../assets/hex.svg"
