@@ -1,5 +1,5 @@
 import React from "react"
-import "./frontend.css"
+import "./Frontend.css"
 
 function Frontend() {
 	return (
