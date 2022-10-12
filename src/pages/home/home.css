@@ -11,32 +11,44 @@ body {
 
 /* header */
 .header-container {
+	width: 100%;
+	display: flex;
 	align-items: center;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	justify-content: space-around;
+	flex-direction: row;
+	position: relative;
+}
+
+.hexagon-container {
+	width: 85%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	top: 5rem;
+	left: 10vw;
+	position: absolute;
 }
 .header-text {
-	min-width: 35rem;
-	margin-top: 14rem;
+	min-width: 50%;
+	height: 50%;
+	margin-top: 15rem;
+	margin-bottom: 5rem;
 	font-size: 2em;
 	text-align: center;
 	font-weight: bold;
 }
+
 .hex3 {
-	width: 15rem;
-	margin-left: 20rem;
-	margin-top: 7rem;
+	width: 13rem;
 }
 .hex {
-	margin-left: 5rem;
-
 	width: 5rem;
 }
 
 /* presentation */
 .presentation-container {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 	padding: 5rem;
@@ -45,8 +57,8 @@ body {
 .profile-grid {
 	display: grid;
 	grid-template-areas:
-		"left top"
-		"left bottom";
+		"top"
+		"bottom";
 	margin: 1rem;
 	padding: 0.8rem;
 	gap: 20px;
@@ -89,15 +101,10 @@ body {
 	gap: 1.1rem;
 }
 .welcome-grid div {
-	max-height: 12.5rem;
+	max-height: 13.5rem;
 	max-width: 22.25rem;
 	align-items: center;
 	padding: 0.4rem;
-}
-@media (min-width: 700px) {
-	.welcome-grid {
-		grid-template-columns: repeat(2, 1fr);
-	}
 }
 
 .welcome-grid h3 {
@@ -120,7 +127,12 @@ body {
 
 .box-one {
 	background-color: #2f5b79;
+	max-height: 13.5rem;
+	max-width: 22.25rem;
+	align-items: center;
+	padding: 0.4rem;
 }
+
 .box-two {
 	background-color: #6f90a7;
 }
@@ -139,6 +151,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	margin-bottom: 4rem;
+	margin-top: 3rem;
 }
 .social-media-container h2 {
 	margin: 2.5rem;
@@ -213,4 +226,33 @@ body {
 	font-size: 0.8em;
 	text-align: center;
 	font-weight: bold;
+	margin-top: 7rem;
+	margin-bottom: 5rem;
+}
+
+@media (min-width: 700px) {
+	.welcome-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media (max-width: 700px) {
+	.presentation-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 5rem;
+		background-color: white;
+	}
+}
+@media (max-width: 900px) {
+	.hexagon-container {
+		position: relative;
+		align-items: center;
+		width: 10%;
+		left: 25%;
+	}
+	.header-text {
+		margin-top: 6rem;
+	}
 }

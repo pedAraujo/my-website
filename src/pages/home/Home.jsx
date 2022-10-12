@@ -1,5 +1,5 @@
 import React from "react"
-import "./home.css"
+import "./Home.css"
 import profilePic from "../../assets/profilePic.svg"
 import hexThree from "../../assets/hex3.svg"
 import hex from "../../assets/hex.svg"
@@ -10,23 +10,29 @@ import {
 	faInstagram,
 	faGithub,
 } from "@fortawesome/free-brands-svg-icons"
+import { Link } from "react-router-dom"
 
 function Home() {
 	return (
 		<>
+			<div className="hexagon-container">
+				<div className="hexbox">
+					<img className="hex3" alt="Not found" src={hexThree} />
+				</div>
+				<div className="hexbox">
+					<img className="hex" alt="Not found" src={hex} />
+				</div>
+			</div>
 			<div className="header-container">
-				<img className="hex3" alt="Not found" src={hexThree} />
 				<div className="header-text">
 					<p>I create, fix and tinker</p>
 					<p>with technology to find</p>
 					<p>solutions and help others.</p>
 				</div>
-				<img className="hex" alt="Not found" src={hex} />
 			</div>
 			<div className="presentation-container">
+				<img className="profile-picture" alt="Not found" src={profilePic} />
 				<div className="profile-grid">
-					<img className="profile-picture" alt="Not found" src={profilePic} />
-
 					<div className="profile-text">
 						<h3>From atoms to rockets</h3>
 						<div className="profile-text-body">
@@ -40,15 +46,15 @@ function Home() {
 			<div className="welcome-container">
 				<h2 className="welcome-text">Welcome to my space on the internet</h2>
 				<div className="welcome-grid">
-					<div className="box-one">
+					<Link to="/frontend" className="box-one" style={linkStyle}>
 						<h3>Frontend development</h3>
 						<p>
 							I write HTML, CSS and JS using Node, React and React Native to
 							develop solutions for the web and mobile. I am aiming to become a
-							fully fledged software enginee. If you have a project that could
+							fully fledged software engineer. If you have a project that could
 							use my help, please reach out.
 						</p>
-					</div>
+					</Link>
 					<div className="box-two">
 						<h3>Teams & Collaborations</h3>
 						<p>
@@ -82,7 +88,12 @@ function Home() {
 				<h2 className="around-the-web">Around the web</h2>
 				<div className="honeycomb">
 					<div className="ibws-fix">
-						<a className="hexagon" href="https://github.com/pedAraujo">
+						<a
+							className="hexagon"
+							href="https://github.com/pedAraujo"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							<div className="hexagontent">
 								<FontAwesomeIcon
 									icon={faGithub}
@@ -91,31 +102,40 @@ function Home() {
 								/>
 							</div>
 						</a>
-						<div className="hexagon">
-							<div
-								className="hexagontent"
-								href="https://www.linkedin.com/in/pedaraujo/"
-							>
+						<a
+							className="hexagon"
+							href="https://www.linkedin.com/in/pedaraujo/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<div className="hexagontent">
 								<FontAwesomeIcon
 									icon={faLinkedin}
 									size="5x"
 									style={{ color: (0, 0, 0) }}
 								/>
 							</div>
-						</div>
-						<div className="hexagon">
-							<div
-								className="hexagontent"
-								href="https://www.facebook.com/p3d90"
-							>
+						</a>
+						<a
+							className="hexagon"
+							href="https://www.facebook.com/p3d90"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<div className="hexagontent">
 								<FontAwesomeIcon
 									icon={faFacebook}
 									size="5x"
 									style={{ color: (0, 0, 0) }}
 								/>
 							</div>
-						</div>
-						<div className="hexagon">
+						</a>
+						<a
+							className="hexagon"
+							href="https://www.instagram.com/ped_araujo/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							<div className="hexagontent">
 								<FontAwesomeIcon
 									icon={faInstagram}
@@ -123,7 +143,7 @@ function Home() {
 									style={{ color: (0, 0, 0) }}
 								/>
 							</div>
-						</div>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -135,3 +155,7 @@ function Home() {
 }
 
 export default Home
+
+const linkStyle = {
+	textDecoration: "none",
+}
